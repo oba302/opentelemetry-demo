@@ -1,0 +1,21 @@
+com.instana.plugin.generic.hardware:
+  enabled: true
+  availability-zone: 'nomad'
+
+com.instana.plugin.oracledb:
+  remote: # we support listing multiple DBs here, both CDB's and PDB's!
+    - user: 'otelu' # default is 'sys as sysdba'
+      password: 'otelp'
+      databaseSID: 'PDMG' # either databaseSID or databaseServiceName is allowed
+#      databaseServiceName: 'FREEPDB1'
+      availabilityZone: 'nomad-db'
+      poll_rate: 20
+#    - host: '<ORCL_HOST_2>'
+#      port: '<ORCL_PORT>'
+#      user: 'otelu' # default is 'sys as sysdba'
+#      password: 'otelp'
+#      databaseSID: '<INSERT_DB_SID>' # either databaseSID or databaseServiceName is allowed
+#      databaseServiceName: '<ORCL_DB_SERVICE_NAME>'
+#      availabilityZone: 'Remote Monitoring'
+#      poll_rate: 5
+# 
